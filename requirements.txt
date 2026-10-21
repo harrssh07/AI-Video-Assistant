@@ -1,0 +1,44 @@
+# ── AI Meeting Assistant ── requirements.txt ──────────────────────────────────
+# Recommended Python version: 3.11
+
+# ── Audio / Video Acquisition ─────────────────────────────────────────────────
+yt-dlp                           # Download audio from YouTube URLs
+pydub                            # Audio file manipulation / format conversion
+ffmpeg-python                    # FFmpeg bindings (FFmpeg binary must be installed separately)
+
+# ── Speech-to-Text (Local Whisper) ────────────────────────────────────────────
+openai-whisper                   # OpenAI Whisper (runs locally)
+torch                            # PyTorch backend for Whisper
+torchaudio                       # Audio utilities for PyTorch
+
+# ── Translation (Hindi → English) ─────────────────────────────────────────────
+deep-translator                  # Lightweight translation wrapper (Google backend)
+
+# ── LLM Orchestration — LangChain + Mistral ───────────────────────────────────
+langchain
+langchain-core
+langchain-community
+langchain-mistralai              # LangChain wrapper for Mistral API
+mistralai                        # Official Mistral Python client
+
+# ── RAG Pipeline ──────────────────────────────────────────────────────────────
+chromadb                         # Local vector database
+sentence-transformers            # Hugging Face embedding models
+langchain-huggingface            # LangChain ↔ Hugging Face embeddings bridge
+huggingface-hub                  # Model downloading from Hugging Face Hub
+tiktoken                         # Token counting for text splitting
+
+# ── Streamlit UI ──────────────────────────────────────────────────────────────
+streamlit
+streamlit-extras                 # Additional Streamlit widgets / utilities
+watchdog                         # Improves Streamlit hot reload
+
+# ── PDF & TXT Export ──────────────────────────────────────────────────────────
+reportlab                        # PDF generation
+fpdf2                            # Lightweight PDF library
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+python-dotenv                    # Load API keys from .env
+numpy
+tqdm                             # Progress bars
+requests
